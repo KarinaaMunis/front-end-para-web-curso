@@ -1,0 +1,52 @@
+/* Criar estilo para página. */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9cbe91;
+    margin: 5px;
+    padding: 5px;
+}
+/* Estilo para a seção principal */
+section {
+    background-color: #73ce61;
+    border: 1px solid #9cbe91;
+    border-radius: 8px;
+    padding: 20px;
+}
+/* Estilo para os artigos */
+article {
+    background-color: #9cbe91;
+    border: 5px solid #9cbe91;
+    border-radius: 8px;
+    padding: 20px;
+}
+/* Estilo para cabeçalho */
+header {
+    background-color: #73ce61;
+    border: 1px solid #9cbe91;
+    border-radius: 8px;
+    padding: 20px;
+}
+/* Estilo para os títulos */
+h2, h3 {
+    /* Toda vez que precisar trocar a cor do texto, declare a tag que contenha o texto que vai trocar
+    de cor e chame o argumento color */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+ h1 {
+    /* Toda vez que precisar trocar a cor do texto, declare a tag que contenha o texto que vai trocar
+    de cor e chame o argumento color */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 25   px;
+    margin-bottom: 12px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
