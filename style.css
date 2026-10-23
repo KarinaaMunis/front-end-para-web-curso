@@ -1,52 +1,132 @@
-/* Criar estilo para página. */
+/* ==========================================
+   1. CONFIGURAÇÃO DA PÁGINA E DO FUNDO
+   ========================================== */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #9cbe91;
-    margin: 5px;
-    padding: 5px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #49473f;
+  margin: 0;
+  padding: 100px 20px 20px 20px; /* Margem superior evita que o conteúdo suma atrás do header fixo */
+  
+  /* Centralização total do conteúdo no meio da tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  /* Fundo único, sem duplicar e cobrindo a tela inteira */
+  background-image: url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Corrigido: adicionado ponto e vírgula */
+  background-attachment: fixed;
 }
-/* Estilo para a seção principal */
-section {
-    background-color: #73ce61;
-    border: 1px solid #9cbe91;
-    border-radius: 8px;
-    padding: 20px;
+
+/* ==========================================
+   2. TIPOGRAFIA (TÍTULOS)
+   ========================================== */
+h1 {
+  color: #49473f;
+  font-family: 'Arial', sans-serif;
+  font-size: 25px; /* Corrigido: removido o espaço entre o número e o 'px' */
+  margin-bottom: 12px;
+  text-align: center;
 }
-/* Estilo para os artigos */
-article {
-    background-color: #9cbe91;
-    border: 5px solid #9cbe91;
-    border-radius: 8px;
-    padding: 20px;
-}
-/* Estilo para cabeçalho */
-header {
-    background-color: #73ce61;
-    border: 1px solid #9cbe91;
-    border-radius: 8px;
-    padding: 20px;
-}
-/* Estilo para os títulos */
+
 h2, h3 {
-    /* Toda vez que precisar trocar a cor do texto, declare a tag que contenha o texto que vai trocar
-    de cor e chame o argumento color */
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    margin-bottom: 12px;
+  color: #486e29;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
 }
- h1 {
-    /* Toda vez que precisar trocar a cor do texto, declare a tag que contenha o texto que vai trocar
-    de cor e chame o argumento color */
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    font-size: 25   px;
-    margin-bottom: 12px;
+
+/* ==========================================
+   3. ESTRUTURA E CAIXAS (LAYOUT)
+   ========================================== */
+header {
+    /* TOPO FIXO */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #73ce61;
+  border: 1x solid #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
+
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px; /* Limita a largura máxima para melhor organização visual */
+  gap: 20px;       /* Cria um espaçamento uniforme entre as caixas */
+  padding: 20px;
 }
+
+section {
+  background-color: #73ce61;
+  border: 1px solid #f0cde8;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+article {
+  background-color: #f5dae9;
+  border: 5px solid #79a76a;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center; /* Garante que os textos internos do artigo também fiquem alinhados ao centro */
+}
+
+/* ==========================================
+   4. CARTÃO DE PERFIL
+   ========================================== */
+.cartao-perfil {
+  background-color: #f5dae9
+  border: 5px;x solid #79a76a;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center; /* Garante que os textos internos do cartão também fiquem alinhados ao centro */
+}
+
+.cartao-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cartao-subtitulo {
+  color: #49473f;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cartao-descricao {
+  color: #49473f;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.cartao-status {
+  display: inline-block; /* Permite aplicar margens e paddings corretamente se necessário */
+  color: #49473f;
+  font-weight: 650;
+  text-transform: uppercase;
+  border-radius: 9999px;
+}
+
